@@ -69,7 +69,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\w\a\]$PS1"
     ;;
 *)
     ;;
@@ -137,7 +137,7 @@ xterm*|rxvt*)
                 # output them.
                 ;;
             *)
-                echo -ne "\033]0;${USER}@${HOSTNAME}: ${BASH_COMMAND}\007"
+                echo -ne "\033]0;${BASH_COMMAND}: ${PWD}\007"
                 ;;
         esac
     }
