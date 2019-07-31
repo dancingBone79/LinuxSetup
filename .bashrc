@@ -152,3 +152,15 @@ cd ()
 	builtin cd "$@"
 	ls --color=always|head -30|column
 }
+
+#defining this function by "ls()" doesn't work.
+function ls
+{
+	local hasl
+	(for e in "$@"; do [[ "$e" == "-l" ]] && exit 0; done; exit 1) && hasl=true
+	if [[ $hasl = true ]]; then
+		command ls "$@" -h --time-style=long-iso
+	else
+		command ls "$@"
+	fi
+}
