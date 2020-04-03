@@ -1,0 +1,18 @@
+" 全局使用的vimrc。此文件使sudo vim时获得相似的使用体验。
+
+set nocompatible
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=utf-8,utf-16,ucs-bom,prc
+set fileencoding=utf-8
+
+set tabstop=4
+set shiftwidth=4
+set smarttab
+
+colo evening
+
+set scrolloff=2
+set sidescroll=3
+
+set smartcase
