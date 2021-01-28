@@ -29,7 +29,7 @@ colo evening
 " 编码设置
 if has("gui_running") || has("unix")
     set encoding=utf-8 " 设置vim内部使用的字符编码
-    lang messages zh_CN.UTF-8 " 解决consle输出乱码
+    " lang messages zh_CN.UTF-8 " 解决consle输出乱码
 else
     set encoding=chinese " 设置命令提示符下vim不乱码
     set termencoding=chinese     "终端下的编码，对gvim来说没有必要设置
@@ -85,6 +85,7 @@ endfunction
 autocmd BufNewFile,BufRead *.vb set ft=vbnet
 
 let g:fencview_autodetect=1
+set is
 set ic
 set nocompatible
 set so=2
