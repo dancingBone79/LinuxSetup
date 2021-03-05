@@ -88,6 +88,7 @@ let g:fencview_autodetect=1
 set is
 set ic
 set nocompatible
+set showcmd
 set so=2
 set sidescroll=3
 set selectmode=
