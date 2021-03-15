@@ -87,6 +87,7 @@ autocmd BufNewFile,BufRead *.vb set ft=vbnet
 let g:fencview_autodetect=1
 set is
 set ic
+set hlsearch
 set nocompatible
 set showcmd
 set so=2
@@ -96,6 +97,10 @@ set display=lastline
 set synmaxcol=400
 
 set smartcase
+
+" 如果X服务，则VIM会默认读取X服务器的剪贴板，在此禁止
+" https://stackoverflow.com/questions/14635295/vim-takes-a-very-long-time-to-start-up
+set clipboard=exclude:.*
 
 
 
