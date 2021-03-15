@@ -16,3 +16,9 @@ git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt -
 # follow https://github.com/magicmonty/bash-git-prompt#via-git-clone
 ln -s ~/LinuxSetup/.git-prompt-colors.sh ~/.git-prompt-colors.sh
 ```
+
+在标题栏显示当前命令。添加到.bashrc。
+```bash
+PS1="\033]0;\w\007${PS1}"
+trap 'echo -ne "\033]0;$BASH_COMMAND\007" > /dev/stderr' DEBUG
+```
