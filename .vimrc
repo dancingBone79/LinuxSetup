@@ -23,7 +23,11 @@ set noswapfile
 
 set foldlevelstart=99
 
+set t_Co=256
 colo evening
+set list
+set listchars=tab:>-
+hi SpecialKey ctermfg=237
 
 
 " 编码设置
