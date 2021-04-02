@@ -70,7 +70,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=()
+plugins=(z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,7 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-setopt HIST_IGNORE_DUPS
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt no_hist_ignore_space
 
 bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
