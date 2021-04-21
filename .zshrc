@@ -107,6 +107,10 @@ setopt no_hist_ignore_space
 bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
 
+
+# ../之后不要返回当前目录
+zstyle ':completion:*' ignore-parents parent pwd
+
 if [ -f ~/.bash_aliases ]; then
 	source ~/.bash_aliases
 fi
