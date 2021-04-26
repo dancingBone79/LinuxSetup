@@ -119,6 +119,10 @@ if [ -f ~/.zsh_aliases ]; then
 	source ~/.zsh_aliases
 fi
 
+# sudo apt install command-not-found
+# 如果命令找不到，提示是否可以用apt安装
+source '/etc/zsh_command_not_found'
+
 
 # Runs before executing the command
 function omz_termsupport_preexec {
