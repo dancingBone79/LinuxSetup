@@ -176,3 +176,10 @@ function omz_termsupport_preexec {
   # title '$CMD' '%100>...>$LINE%<<'
 }
 
+function addSudo 
+{
+	BUFFER="sudo $BUFFER"
+	zle accept-line
+}
+zle -N addSudo_widget addSudo
+bindkey '\C-s' addSudo_widget
