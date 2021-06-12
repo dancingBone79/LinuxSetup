@@ -14,13 +14,9 @@ git config --global user.name 'gqqnbig'
 git config --global credential.helper store
 git config --global core.editor vim
 
-git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
-# follow https://github.com/magicmonty/bash-git-prompt#via-git-clone
-ln -s ~/LinuxSetup/.git-prompt-colors.sh ~/.git-prompt-colors.sh
-```
+ln -s ~/LinuxSetup/.zshrc ./
+ln -s ~/LinuxSetup/.p10k.zsh ./
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
-在标题栏显示当前命令。添加到.bashrc。
-```bash
-PS1="\033]0;\w\007${PS1}"
-trap 'echo -ne "\033]0;$BASH_COMMAND\007" > /dev/stderr' DEBUG
+sudo reboot
 ```
