@@ -19,4 +19,7 @@ ln -s ~/LinuxSetup/.p10k.zsh ./
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 sudo reboot
+
+# 锁屏时间30分钟
+gsettings set org.gnome.desktop.session idle-delay 1800
 ```
