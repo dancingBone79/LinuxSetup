@@ -12,6 +12,7 @@ set smarttab
 
 colo evening
 
+set hlsearch
 set scrolloff=2
 set sidescroll=3
 
