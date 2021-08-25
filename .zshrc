@@ -77,7 +77,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z)
+plugins=(z extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -183,6 +183,15 @@ function omz_termsupport_preexec {
   # title '$CMD' '%100>...>$LINE%<<'
 }
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+bindkey '\C-u' undo
+setopt no_histverify
+
+source /home/qiqig/mpi-servers/sudoers_cautions
+
+
 function addSudo 
 {
 	BUFFER="sudo $BUFFER"
@@ -190,3 +199,7 @@ function addSudo
 }
 zle -N addSudo_widget addSudo
 bindkey '\C-s' addSudo_widget
+
+# Fix GUI error
+# libGL error: failed to load driver: swrast
+export LIBGL_ALWAYS_INDIRECT=1
