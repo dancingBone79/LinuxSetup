@@ -14,9 +14,19 @@ git config --global user.name 'gqqnbig'
 git config --global credential.helper store
 git config --global core.editor vim
 
+# oh my zsh will move .zsh to a backup file
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+mv .zshrc ~/LinuxSetup
+
 ln -s ~/LinuxSetup/.zshrc ./
 ln -s ~/LinuxSetup/.p10k.zsh ./
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+# Install powerlevel10k
+cd LinuxSetup/powerlevel10k
+git submodule init
+git submodule update --depth=1
+ln -s ~/LinuxSetup/powerlevel10k ~/.oh-my-zsh/custom/themes/powerlevel10k
 
 sudo reboot
 
