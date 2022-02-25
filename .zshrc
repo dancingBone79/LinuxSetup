@@ -180,6 +180,11 @@ function omz_termsupport_preexec {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 bindkey '\C-u' undo
+# ctrl+right
+bindkey '\C\e[C' forward-word
+# ctrl+left
+bindkey '\C\e[D' backward-word
+
 setopt no_histverify
 
 source /home/qiqig/mpi-servers/sudoers_cautions
