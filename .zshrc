@@ -187,9 +187,6 @@ bindkey '\C\e[D' backward-word
 
 setopt no_histverify
 
-source /home/qiqig/mpi-servers/sudoers_cautions
-
-
 function addSudo 
 {
 	BUFFER="sudo $BUFFER"
