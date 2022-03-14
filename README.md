@@ -17,6 +17,7 @@ git config --global core.editor vim
 # oh my zsh will move .zsh to a backup file
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
+cd ~
 mv .zshrc ~/LinuxSetup
 
 ln -s ~/LinuxSetup/.zshrc ./
