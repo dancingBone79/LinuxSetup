@@ -1,3 +1,5 @@
+source $VIMRUNTIME/defaults.vim
+
 set nocompatible
 
 behave mswin
@@ -118,8 +120,3 @@ noremap <C-k> <C-y>
 " 增加数字 alt+a，减少数字alt+x
 :nnoremap <A-a> <C-a>
 :nnoremap <A-x> <C-x>
-
-
-"允许特定文件夹的配置
-set exrc
-set secure
