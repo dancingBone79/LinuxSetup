@@ -107,6 +107,11 @@ setopt no_hist_ignore_space
 bindkey "\033[1~" beginning-of-line
 bindkey "\033[4~" end-of-line
 
+# https://stackoverflow.com/a/49968871/746461
+# Press esc + d to run directory completion anywhere
+zle -C complete-file complete-word _generic
+zstyle ':completion:complete-file::::' completer _files
+bindkey '\ed' complete-file
 
 # ../之后不要返回当前目录
 zstyle ':completion:*' ignore-parents parent pwd
