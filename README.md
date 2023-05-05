@@ -15,8 +15,10 @@ git config --global credential.helper store
 git config --global core.editor vim
 
 # oh my zsh will move .zsh to a backup file
-
 REPO=gqqnbig/LinuxSetup-ohmyzsh sh -c "$(wget https://raw.github.com/gqqnbig/LinuxSetup-ohmyzsh/master/tools/install.sh -O -)" "" --unattended
+# unattended mode doesn't change default shell,
+# so we change it here.
+chsh -s /bin/zsh
 
 cd ~
 mv .zshrc ~/LinuxSetup
