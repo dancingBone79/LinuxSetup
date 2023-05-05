@@ -15,7 +15,8 @@ git config --global credential.helper store
 git config --global core.editor vim
 
 # oh my zsh will move .zsh to a backup file
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+REPO=gqqnbig/LinuxSetup-ohmyzsh sh -c "$(wget https://raw.github.com/gqqnbig/LinuxSetup-ohmyzsh/master/tools/install.sh -O -)" "" --unattended
 
 cd ~
 mv .zshrc ~/LinuxSetup
