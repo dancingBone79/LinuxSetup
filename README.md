@@ -2,7 +2,7 @@
 
 ```bash
 sudo apt update
-sudo apt-get install --yes git vim zsh
+sudo apt install --yes git vim zsh
 
 git clone https://gqqnbig@github.com/gqqnbig/LinuxSetup.git --depth=1
 ln -s LinuxSetup/.vimrc .vimrc
