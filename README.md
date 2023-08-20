@@ -32,6 +32,7 @@ git submodule init
 git submodule update --depth=1
 ln -s ~/LinuxSetup/powerlevel10k ~/.oh-my-zsh/custom/themes/powerlevel10k
 
+sudo apt install --yes command-not-found
 sudo reboot
 
 # 锁屏时间30分钟
