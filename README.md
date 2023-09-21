@@ -21,9 +21,9 @@ REPO=gqqnbig/LinuxSetup-ohmyzsh sh -c "$(wget https://raw.github.com/gqqnbig/Lin
 chsh -s /bin/zsh
 
 cd ~
+# back up original zshrc if you need it.
 mv .zshrc ~/LinuxSetup
-
-ln -s ~/LinuxSetup/.zshrc ./
+ln --force -s ~/LinuxSetup/.zshrc ./
 ln -s ~/LinuxSetup/.p10k.zsh ./
 
 # Install powerlevel10k
